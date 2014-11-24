@@ -1,0 +1,11 @@
+﻿{ "Questions":
+    { 
+          "Question": "Why",
+          "Answers": {
+            "A": "X",
+            "B": "Y",
+            "C": "Z"
+          },
+          "Answer": "1"
+  }
+}

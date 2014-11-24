@@ -1,0 +1,63 @@
+﻿<div class="page-header">
+ <h1>Welcome to 3by3</h1>
+ <div class="helptext">A quiz of general knowledge</div>
+</div>
+<div class="container-fluid">
+ <div class="row" id="grid">
+  <div class="row">
+   <div class="col-md-3 box" ng-click="showid('#1' )">
+    <p class="boxtxt" id="1">1</p>
+   </div>
+   <div class="col-md-3 box" ng-click="showid('#2' )">
+    <p class="boxtxt" id="2">2</p>
+   </div>
+   <div class="col-md-3 box" ng-click="showid('#3' )">
+    <p class="boxtxt" id="3">3</p>
+   </div>
+  </div>
+  <div class="row">
+   <div class="col-md-3 box" ng-click="showid('#4' )">
+    <p class="boxtxt" id="4">4</p>
+   </div>
+   <div class="col-md-3 box" ng-click="showid('#5' )">
+    <p class="boxtxt 4" id="5">5</p>
+   </div>
+   <div class="col-md-3 box" ng-click="showid('#6' )">
+    <p class="boxtxt" id="6">6</p>
+   </div>
+  </div>
+  <div class="row">
+   <div class="col-md-3 box" ng-click="showid('#7' )">
+    <p class="boxtxt" id="7">7</p>
+   </div>
+   <div class="col-md-3 box" ng-click="showid('#8' )">
+    <p class="boxtxt" id="8">8</p>
+   </div>
+   <div class="col-md-3 box" ng-click="showid('#9' )">
+    <p class="boxtxt" id="9">9</p>
+   </div>
+  </div>
+
+ </div>
+ <div class="container-fluid" id="card">
+  <div class="row">
+   <div class="col-md-6 card">
+    <h1 class="txt">{{ sqid }}</h1>
+    <h1 class="txt">{{ Questions }}</h1>
+
+    <form name="ansFrm" ng-controller="tbtCtrl">
+     <div class="row anstxt">
+      <br /><input type="radio" ng-model="ans" value="A"> {{ answers.A }} <br />
+      <br /><input type="radio" ng-model="ans" value="B"> {{ answers.B }} <br />
+      <br /><input type="radio" ng-model="ans" value="C"> {{ answers.C }} <br />
+     </div>
+     <hr />
+     <button type="button" ng-click="submit()">Submit</button>
+    </form>
+   </div>
+  </div>
+  
+  
+ </div>
+
+</div>

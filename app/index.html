@@ -1,0 +1,65 @@
+<!doctype html>
+<html ng-app="tbtApp">
+    <head>
+        <title>TBT</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.css" rel="stylesheet" />
+        <link href="css/bootstrap-theme.css" rel="stylesheet" />
+								<link rel="stylesheet" href="css/animations.css">
+        <style>
+
+        .box {
+            border: 2px solid black;
+            height: 200px;
+            margin: 1em;
+            background-color: black;
+        }
+
+        .card {
+            border: 2px solid black;
+            height: 400px;
+        }
+         .txt {
+            padding-top: 10px;
+            line-height: 25px;
+      	     font-family: Tahoma, Helvetica;
+      	     text-align: left;  
+            font-size: xx-large; 
+        }
+        .boxtxt {
+            padding-top: 75px;
+            line-height: 25px;
+      	     font-family: Tahoma, Helvetica;
+      	     text-align: center;  
+            font-size: 200px; 
+            color:white
+        }
+         .anstxt {
+            padding-top: 10px;
+            padding-bottom: 20px;
+            padding-left: 20px;
+      	     font-family: Tahoma, Helvetica;
+      	     text-align: left;  
+            font-size: xx-large; 
+            line-height: 25px;
+            color:black
+        }
+        
+        </style>
+    </head>
+    <body>
+        <div ng-view class="container"></div>
+        <script src="lib/jquery-1.10.2.min.js"></script>
+								<script src="lib/bootstrap.js"></script>
+								<script src="lib/angular/angular.js"></script>
+        <script src="lib/angular/angular-route.js"></script>
+								<script src="lib/angular/angular-resource.js"></script>
+        <script src="lib/angular/angular-animate.js"></script>
+								<script src="js/app.js"></script>
+        <script src="js/controllers.js"></script>
+        <script src="js/services.js"></script>
+        <!--<script src="js/filters.js"></script>-->
+        <script src="js/directives.js"></script>
+    </body>
+</html>
