@@ -1,4 +1,4 @@
-var tbtAppControllers = angular.module('tbtAppControllers', []);
+﻿var tbtAppControllers = angular.module('tbtAppControllers', []);
 
 
 
@@ -17,7 +17,9 @@ tbtAppControllers.controller('tbtCtrl', ['$scope', '$location', 'Submit',
    $scope.showid = function (sqid) {
     angular.element("#grid").hide();
     angular.element("#card").show();
-    $scope.Questions  = "What is the capital of Israel?";
+    $scope.Questions = "What is the capital of Israel?";
+    $scope.Questions = "?מה היא עיר הבירה של ישראל";
+
     $scope.sqid = sqid;
    };
 

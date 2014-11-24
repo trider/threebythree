@@ -46,13 +46,18 @@
     <h1 class="txt">{{ Questions }}</h1>
 
     <form name="ansFrm" ng-controller="tbtCtrl">
-     <div class="row anstxt">
-      <br /><input type="radio" ng-model="ans" value="A"> {{ answers.A }} <br />
+     <!--<div class="row anstxt">
+      <br /><input type="radio" ng-model="ans" value="A"> <br />
       <br /><input type="radio" ng-model="ans" value="B"> {{ answers.B }} <br />
       <br /><input type="radio" ng-model="ans" value="C"> {{ answers.C }} <br />
+     </div>-->
+     <div class="row anstxt">
+      <br />{{ answers.A }} <input type="radio" ng-model="ans" value="A"><br />
+      <br />{{ answers.B }} <input type="radio" ng-model="ans" value="B"><br />
+      <br />{{ answers.C }} <input type="radio" ng-model="ans" value="C"><br />
      </div>
      <hr />
-     <button type="button" ng-click="submit()">Submit</button>
+     <button type="button" ng-click="submit()" class="col-lg-offset-10">Submit</button>
     </form>
    </div>
   </div>
