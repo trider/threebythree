@@ -42,7 +42,7 @@
  <div class="container-fluid" id="card">
   <div class="row">
    <div class="col-md-6 card">
-    <h1 class="txt">{{ sqid }}</h1>
+    <!--<h1 class="txt">{{ sqid }}</h1>-->
     <h1 class="txt">{{ Questions }}</h1>
 
     <form name="ansFrm" ng-controller="tbtCtrl">
@@ -57,7 +57,7 @@
       <br />{{ answers.C }} <input type="radio" ng-model="ans" value="C"><br />
      </div>
      <hr />
-     <button type="button" ng-click="submit()" class="col-lg-offset-10">Submit</button>
+      <button type="button" ng-click="submit()" class="btn btn-danger btn-block btn-SM">שלח</button>
     </form>
    </div>
   </div>

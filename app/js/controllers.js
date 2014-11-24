@@ -8,16 +8,16 @@ tbtAppControllers.controller('tbtCtrl', ['$scope', '$location', 'Submit',
     
    angular.element("#card").hide();
    $scope.answers = {
-    "A": "Jerusalem",
-    "B": "Tel Aviv",
-    "C": "Haifa"
+    "A": "ירושלים",
+    "B": "תל אביב",
+    "C": "חיפה"
    };
    $scope.answer = "A";
 
    $scope.showid = function (sqid) {
     angular.element("#grid").hide();
     angular.element("#card").show();
-    $scope.Questions = "What is the capital of Israel?";
+    //$scope.Questions = "What is the capital of Israel?";
     $scope.Questions = "?מה היא עיר הבירה של ישראל";
 
     $scope.sqid = sqid;
