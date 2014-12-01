@@ -1,72 +1,70 @@
-﻿<!--<div class="page-header">
+﻿<div class="page-header">
  <h1>Welcome to 3by3</h1>
  <div class="helptext">A quiz of general knowledge</div>
-</div>-->
-<div ng-controller="tbtCtrl">
- {{score}}
- <div class="container-fluid">
-  <div class="row">
-  </div>
-  <div class="row" id="grid">
-   <div class="row">
-    <div class="col-md-3 box" ng-click="showid('#1', '1' )">
+</div>
+<div class="container-fluid" ng-controller="tbtCtrl">
+ <div class="table-responsive" id="grid">
+  <table class=" table table-bordered" table-condensed">
+   <tr>
+    <td class="box" ng-click="showid('1', '1' )">
      <p class="boxtxt" id="1">1</p>
-    </div>
-    <div class="col-md-3 box" ng-click="showid('#2', '2' )">
+    </td>
+    <td class="box" ng-click="showid('2', '2' )">
      <p class="boxtxt" id="2">2</p>
-    </div>
-    <div class="col-md-3 box" ng-click="showid('#3', '4' )">
+    </td>
+    <td class="box" ng-click="showid('3', '4' )">
      <p class="boxtxt" id="3">3</p>
-    </div>
-   </div>
-   <div class="row">
-    <div class="col-md-3 box" ng-click="showid('#4', '8' )">
+    </td>
+   </tr>
+   <tr>
+    <td class="box" ng-click="showid('4', '8' )">
      <p class="boxtxt" id="4">4</p>
-    </div>
-    <div class="col-md-3 box" ng-click="showid('#5', '16' )">
-     <p class="boxtxt 4" id="5">5</p>
-    </div>
-    <div class="col-md-3 box" ng-click="showid('#6', '32' )">
+    </td>
+    <td class="box" ng-click="showid('5', '16' )">
+     <p class="boxtxt" id="5">5</p>
+    </td>
+    <td class="box" ng-click="showid('6', '32' )">
      <p class="boxtxt" id="6">6</p>
-    </div>
-   </div>
-   <div class="row">
-    <div class="col-md-3 box" ng-click="showid('#7', '64' )">
+    </td>
+   </tr>
+   <tr>
+    <td class="box" ng-click="showid('7', '64' )">
      <p class="boxtxt" id="7">7</p>
-    </div>
-    <div class="col-md-3 box" ng-click="showid('#8', '128' )">
+    </td>
+    <td class="box" ng-click="showid('8', '128' )">
      <p class="boxtxt" id="8">8</p>
-    </div>
-    <div class="col-md-3 box" ng-click="showid('#9', 256 )">
+    </td>
+    <td class="box" ng-click="showid('9', 256 )">
      <p class="boxtxt" id="9">9</p>
-    </div>
-   </div>
-
-  </div>
-  <div class="container-fluid" id="card">
-   <div class="row">
-    <div class="col-md-6 card">
-     <h1 class="txt">{{ Questions }}</h1>
-     <form name="ansFrm">
-      <!--<div class="row anstxt">
-       <br /><input type="radio" ng-model="ans" value="A"> <br />
-       <br /><input type="radio" ng-model="ans" value="B"> {{ answers.B }} <br />
-       <br /><input type="radio" ng-model="ans" value="C"> {{ answers.C }} <br />
-      </div>-->
-      <div class="row anstxt">
-       <br />{{ answers.A }} <input type="radio" ng-model="ans" value="A"><br />
-       <br />{{ answers.B }} <input type="radio" ng-model="ans" value="B"><br />
-       <br />{{ answers.C }} <input type="radio" ng-model="ans" value="C"><br />
-      </div>
-      <hr />
-      <button type="button" ng-click="submit()" class="btn btn-danger btn-block btn-SM">שלח</button>
-     </form>
-    </div>
-   </div>
-
-
-  </div>
-
+    </td>
+  </table>
  </div>
+ <!-- Modal -->
+ <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+   <div class="modal-content">
+    <div class="modal-header">
+     <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+     <h4 class="modal-title" id="myModalLabel"></h4>
+     <h1 class="txt" ng-repeat="question in questions|filter:sqid">{{ question.Question }}</h1>
+    </div>
+     <div class="modal-body" ng-repeat="question in questions|filter:sqid">
+      <div class="row" ng-repeat="answer in question.Answers">
+       <p class="anstxt">({{$index+1}}) {{answer}}</p>
+      </div>
+       <div class="row">
+        <div class="col-xs-4">
+         <input class="form-control" id="ans">
+        </div>
 
+       </div>
+    
+    </div>
+    <div class="modal-footer">
+     <button type="button" ng-click="submit()" class="btn btn-primary" ng-model="ans">Submit</button>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
 </div>

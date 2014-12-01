@@ -2,12 +2,14 @@ var tbtAppServices = angular.module('tbtAppServices', ['ngResource']);
 
 tbtAppServices.service('Submit', function () {
 
- this.check = function (input, answer) {
+ this.check = function (id, input, questions) {
   var val = false
-  if (input == answer)
-  {
-   val =  true;
-  }
+  angular.forEach(questions, function (item, key) {
+   if(input == item.Answer && id == item.sqid )
+   {
+    val = true;
+   }
+  });
   return val;
  }
 
