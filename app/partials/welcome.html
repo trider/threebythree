@@ -1,10 +1,7 @@
-﻿<div class="page-header">
- <h1>Welcome to 3by3</h1>
- <div class="helptext">A quiz of general knowledge</div>
-</div>
-<div class="container-fluid" ng-controller="tbtCtrl">
+﻿<div class="container-fluid" ng-controller="tbtCtrl">
+ <h1 class="htxt">3x3</h1>
  <div class="table-responsive" id="grid">
-  <table class=" table table-bordered" table-condensed">
+  <table class=" table table-bordered" table-condensed" align="center" style="width:50%;height:50%">
    <tr>
     <td class="box" ng-click="showid('1', '1' )">
      <p class="boxtxt" id="1">1</p>
@@ -39,32 +36,46 @@
     </td>
   </table>
  </div>
+ <p class="txt">סיבוב : {{round}}</p>
  <!-- Modal -->
- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+ <div class="modal fade bs-example-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" dir="rtl">
   <div class="modal-dialog">
    <div class="modal-content">
     <div class="modal-header">
      <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
      <h4 class="modal-title" id="myModalLabel"></h4>
-     <h1 class="txt" ng-repeat="question in questions|filter:sqid">{{ question.Question }}</h1>
+     <h1 class="txt" ng-repeat="question in questions|filter:sqid">{{ question.Question }}?</h1>
     </div>
-     <div class="modal-body" ng-repeat="question in questions|filter:sqid">
-      <div class="row" ng-repeat="answer in question.Answers">
-       <p class="anstxt">({{$index+1}}) {{answer}}</p>
-      </div>
-       <div class="row">
-        <div class="col-xs-4">
-         <input class="form-control" id="ans">
-        </div>
+    <div class="modal-body">
 
+      <video autoplay="autoplay" preload="auto" ng-click="video()" style="width:90%;height:90%" id="media">
+       <source src="{{ asset }}" type="video/mp4" />
+      </video>
+
+     <div class="row" ng-repeat="question in questions|filter:sqid">
+      <ul ng-repeat="answer in question.Answers">
+       <li class="anstxt">{{answer}}</li>
+      </ul>
+
+      <form class="form-inline" role="form">
+       <div class="col-sm-6 pull-right">
+        <label>תשובה</label>
+        <select class="form-control" id="ans">
+         <option ng-repeat="answer in question.Answers">{{answer}}</option>
+        </select>
        </div>
-    
+      </form>
+     </div>
     </div>
+
     <div class="modal-footer">
-     <button type="button" ng-click="submit()" class="btn btn-primary" ng-model="ans">Submit</button>
+     <button type="button" ng-click="submit()" class="btn btn-primary" ng-model="ans">שלח</button>
     </div>
    </div>
+
   </div>
+ </div>
+</div>
  </div>
 </div>
 </div>
