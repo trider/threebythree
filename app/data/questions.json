@@ -1,64 +1,66 @@
 ﻿[
-     {
-      "sqid": "#1", "Question": "מה היא עיר הבירה של ישראל",
-      "display": true,
-      "url" :  "video/VIDEO0044.mp4",
-      "Answers": ["ירושלים", "תל אביב", "חיפה"],
-      "Answer": "ירושלים"
-     },
-     {
-      "sqid": "#2", "Question": "באיזו שנה הייתה עיר תל אביב נוסדה",
-      "display": false,
-      "Answers": ["1901", "1909", "1920"],
-      "Answer": "1909"
-     },
-     {
-      "sqid": "#3", "Question": "מהו ההר הגבוה ביותר בישראל",
-      "display": true,
-      "url" :  "video/VIDEO0044.mp4",
-      "Answers": [ "כרמל", "בוקר", "חרמון"],
-      "Answer": "חרמון"
-     },
-     {
-      "sqid": "#4", "Question": "מה היה הקיבוץ הראשון",
-      "display": false,
-      "url" :  "",
-      "Answers": ["בית אלפא", "דגניה", "טירת צבי"],
-      "Answer": "דגניה"
-     },
-     {
-      "sqid": "#5", "Question": "מה היא העיר הדרומית ביותר בישראל",
-       "display": true,
-       "url" :  "video/VIDEO0044.mp4",
-       "Answers": ["אשדוד", "אילת",  "מעלות"],
-       "Answer": "אילת"
-     },
-     {
-      "sqid": "#6", "Question": "מי היה בנו הבכור של יעקב",
-      "display": false,
-      "url" :  "",
-      "Answers": ["לוי", "שמעון", "ראובן"],
-      "Answer": "ראובן"
-     },
-     {
-      "sqid": "#7", "Question": "מי היה ראש הממשלה הראשונה של מדינת ישראל",
-      "display": true,
-      "url" :  "video/VIDEO0044.mp4",
-      "Answers": ["לוי אשכול", "דוד בן גוריון", "גולדה מאיר"],
-      "Answer": "דוד בן גוריון"
-     },
-     {
-      "sqid": "#8", "Question": "מי בנה את מצדה",
-        "display": false,
-        "url" :  "",
+    {
+        "sqid": "#1",
+        "Question": "מה היא עיר הבירה של ישראל",
+        "display": true,
+        "url": "<iframe width=400 height=300 src=//www.youtube.com/embed/OjiKpANSw0w?rel=0&amp;controls=0&amp;showinfo=00&amp;autoplay=1></iframe>",
+        "Answers": [ "ירושלים", "תל אביב", "חיפה" ],
+        "Answer": "ירושלים"
+    },
+    {
+        "sqid": "#2", "Question": "באיזו שנה הייתה עיר תל אביב נוסדה",
+        "display": true,
+        "url": "<img src=img/blue.png style=width:30%;height:30% />",
+        "Answers": ["1901", "1909", "1920"],
+        "Answer": "1909"
+    },
+    {
+        "sqid": "#3", "Question": "מהו ההר הגבוה ביותר בישראל",
+        "display": true,
+        "url" :  "<video autoplay=autoplay preload=auto ng-click=video() style=width:90%;height:90% id=media><source src=video/VIDEO0044.mp4 type=video/mp4 /></video>",
+        "Answers": [ "כרמל", "בוקר", "חרמון"],
+        "Answer": "חרמון"
+    },
+    {
+        "sqid": "#4", "Question": "מה היה הקיבוץ הראשון",
+        "display": true,
+        "url" :  "<iframe width=100% height=300 scrolling=no frameborder=no src=https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/77882736&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true></iframe>",
+        "Answers": ["בית אלפא", "דגניה", "טירת צבי"],
+        "Answer": "דגניה"
+    },
+    {
+        "sqid": "#5", "Question": "מה היא העיר הדרומית ביותר בישראל",
+        "display": true,
+        "url" :  "<img src=http://upload.wikimedia.org/wikipedia/commons/d/d4/Flag_of_Israel.svg style=width:30%;height:30% />",
+        "Answers": ["אשדוד", "אילת",  "מעלות"],
+        "Answer": "אילת"
+    },
+    {
+        "sqid": "#6", "Question": "מי היה בנו הבכור של יעקב",
+        "display": true,
+        "url" :  "<iframe src=https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d54337.90160580663!2d35.166221!3d31.657968000000004!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sil!4v1417600242783 width=400 height=300 frameborder=0 style=border:0></iframe>",
+        "Answers": ["לוי", "שמעון", "ראובן"],
+        "Answer": "ראובן"
+    },
+    {
+        "sqid": "#7", "Question": "מי היה ראש הממשלה הראשונה של מדינת ישראל",
+        "display": true,
+        "url" :  "<img src=http://hungrygerald.com/wp-content/uploads/2013/02/Ben-Gurion-David-3.jpg style=width:30%;height:30% />",
+        "Answers": ["לוי אשכול", "דוד בן גוריון", "גולדה מאיר"],
+        "Answer": "דוד בן גוריון"
+    },
+    {
+        "sqid": "#8", "Question": "מי בנה את מצדה",
+        "display": true,
+        "url" :  "<img src=http://images.travelpod.com/tripwow/photos/ta-009a-6994-accb/next-stop-to-the-middle-east-massada-israel-jerusalem-israel+1152_12801265087-tpfil02aw-19625.jpg style=width:90%;height:90% />",
         "Answers": ["דוד המלך", "הורדוס", "יוליוס קיסר"],
         "Answer": "הורדוס"
-     },
-     {
-      "sqid": "#9", "Question": "כמה ימים יש בחנוכה",
-      "display": true,
-      "url" :  "video/VIDEO0044.mp4",
-      "Answers": ["1", "7", "8"],
-      "Answer": "8"
-     }
-    ]
+    },
+    {
+        "sqid": "#9", "Question": "כמה ימים יש בחנוכה",
+        "display": false,
+        "url" :  "",
+        "Answers": ["1", "7", "8"],
+        "Answer": "8"
+    }
+]

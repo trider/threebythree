@@ -12,8 +12,7 @@ tbtAppControllers.controller('tbtCtrl', ['$scope', '$location', 'Submit', 'Quest
     
     var success = new Audio('data/success.mp3');
     var fail = new Audio('data/fail.mp3');
-    $scope.asset = "video/VIDEO0044.mp4";
-    
+   
     $scope.video = function (e) {
      var videoElements = angular.element(e.srcElement);
      videoElements[0].pause();
@@ -30,10 +29,11 @@ tbtAppControllers.controller('tbtCtrl', ['$scope', '$location', 'Submit', 'Quest
       
       angular.forEach($scope.questions, function (item, key) {
        if ($scope.sqid == item.sqid) {
+        
         if (item.display)
         {
          console.log(item.url);
-         angular.element('#media').show();
+         angular.element('#media').html(item.url);
         }
         else
         {
@@ -86,7 +86,7 @@ tbtAppControllers.controller('tbtCtrl', ['$scope', '$location', 'Submit', 'Quest
       if ($scope.round > 3) {
        alert("המשחק הסתיים");
        $location.path('/tbt');
-       $scope.round = 0;
+       $scope.round = 1;
       }
      }
      
