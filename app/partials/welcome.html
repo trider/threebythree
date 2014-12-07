@@ -49,14 +49,14 @@
     <div class="modal-body">
      <div id="media" class="row" ></div>
      <div class="row" ng-repeat="question in questions|filter:sqid">
-      <ul ng-repeat="answer in question.Answers">
-       <li class="anstxt">{{answer}}</li>
-      </ul>
+      <!--<ul ng-repeat="answer in question.Answers">-->
+       <!--<li class="anstxt">{{answer}}</li>-->
+      <!--</ul>-->
 
       <form class="form-inline" role="form">
        <div class="col-sm-6 pull-right">
         <label>תשובה</label>
-        <select class="form-control" id="ans">
+        <select class="form-control" id="ans" multiple>
          <option ng-repeat="answer in question.Answers">{{answer}}</option>
         </select>
        </div>
