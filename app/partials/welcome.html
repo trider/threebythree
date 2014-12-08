@@ -57,10 +57,15 @@
         <div class="col-sm-6 pull-right">
         <label>תשובה</label>
          <div class="row" ng-repeat="question in questions|filter:sqid">
+          <ul ng-repeat="answer in question.Answers" >
+           <li><input type="radio" ng-model="ans" value="{{answer }}">{{ answer }}<br/></li>
+          </ul>
+
+
              <input type="radio" ng-model="ans" value="{{question.Answers[0]}}">  {{question.Answers[0]}} <br/>
              <input type="radio" ng-model="ans" value="{{question.Answers[1]}}">  {{question.Answers[1]}} <br/>
              <input type="radio" ng-model="ans" value="{{question.Answers[2]}}">  {{question.Answers[2]}} <br/>
-             <p id="ans">{{ ans }}</p><br/>
+             <input class="form-control" id="ans" placeholder="Enter email" value="{{ ans }}">
            </div>
         </div>
        </form>
