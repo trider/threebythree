@@ -1,7 +1,7 @@
 ﻿<div class="container-fluid" ng-controller="tbtCtrl">
  <h1 class="htxt">3x3</h1>
  <div class="table-responsive" id="grid">
-  <table class=" table table-bordered" table-condensed" align="center" style="width:50%;height:50%">
+  <table class=" table table-bordered" align="center" style="width:50%;height:50%">
    <tr>
     <td class="box" ng-click="showid('1', '1' )">
      <p class="boxtxt" id="1">1</p>
@@ -50,19 +50,33 @@
      <div id="media" class="row" ></div>
      <div class="row" ng-repeat="question in questions|filter:sqid">
       <!--<ul ng-repeat="answer in question.Answers">-->
-       <!--<li class="anstxt">{{answer}}</li>-->
+      <!--<li class="anstxt">{{answer}}</li>-->
       <!--</ul>-->
 
-      <form class="form-inline" role="form">
-       <div class="col-sm-6 pull-right">
+       <form role="form">
+        <div class="col-sm-6 pull-right">
         <label>תשובה</label>
-        <select class="form-control" id="ans" multiple>
-         <option ng-repeat="answer in question.Answers">{{answer}}</option>
-        </select>
-       </div>
-      </form>
-     </div>
-    </div>
+         <div class="row" ng-repeat="question in questions|filter:sqid">
+             <input type="radio" ng-model="ans" value="{{question.Answers[0]}}">  {{question.Answers[0]}} <br/>
+             <input type="radio" ng-model="ans" value="{{question.Answers[1]}}">  {{question.Answers[1]}} <br/>
+             <input type="radio" ng-model="ans" value="{{question.Answers[2]}}">  {{question.Answers[2]}} <br/>
+             <p id="ans">{{ ans }}</p><br/>
+           </div>
+        </div>
+       </form>
+
+      </div>
+     <!--<div class="row" ng-repeat="question in questions|filter:sqid">-->
+      <!--<form class="form-inline" role="form">-->
+       <!--<div class="col-sm-6 pull-right">-->
+        <!--<label>תשובה</label>-->
+        <!--<select class="form-control" id="ans" multiple>-->
+         <!--<option ng-repeat="answer in question.Answers">{{answer}}</option>-->
+        <!--</select>-->
+       <!--</div>-->
+      <!--</form>-->
+     <!--</div>-->
+    <!--</div>-->
 
     <div class="modal-footer">
      <button type="button" ng-click="submit()" class="btn btn-primary" ng-model="ans">שלח</button>
