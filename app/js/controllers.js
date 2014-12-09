@@ -26,7 +26,8 @@ tbtAppControllers.controller('tbtCtrl', ['$scope', '$location', 'Submit', 'Quest
      if (Submit.IsCellEmpty($scope.sqid))
      {
       $scope.val = val;
-      
+
+      angular.element('#ans').text("");
       angular.forEach($scope.questions, function (item, key) {
        if ($scope.sqid == item.sqid) {
         

@@ -49,45 +49,24 @@
     <div class="modal-body">
      <div id="media" class="row" ></div>
      <div class="row" ng-repeat="question in questions|filter:sqid">
-      <!--<ul ng-repeat="answer in question.Answers">-->
-      <!--<li class="anstxt">{{answer}}</li>-->
-      <!--</ul>-->
-
        <form role="form">
-        <div class="col-sm-6 pull-right">
+        <div class="col-sm-3 pull-right anstxt">
         <label>תשובה</label>
          <div class="row" ng-repeat="question in questions|filter:sqid">
-          <ul ng-repeat="answer in question.Answers" >
-           <li><input type="radio" ng-model="ans" value="{{answer }}">{{ answer }}<br/></li>
-          </ul>
+             <label data-ng-repeat="answer in question.Answers">
+              <input name = "answer" type="radio" value="{{ answer }}" ng-model="$parent.ans"> {{answer}}
+             </label>
+            <input class="form-control" id="ans" value="{{ ans }}">
 
-
-             <input type="radio" ng-model="ans" value="{{question.Answers[0]}}">  {{question.Answers[0]}} <br/>
-             <input type="radio" ng-model="ans" value="{{question.Answers[1]}}">  {{question.Answers[1]}} <br/>
-             <input type="radio" ng-model="ans" value="{{question.Answers[2]}}">  {{question.Answers[2]}} <br/>
-             <input class="form-control" id="ans" placeholder="Enter email" value="{{ ans }}">
-           </div>
+         </div>
         </div>
        </form>
 
       </div>
-     <!--<div class="row" ng-repeat="question in questions|filter:sqid">-->
-      <!--<form class="form-inline" role="form">-->
-       <!--<div class="col-sm-6 pull-right">-->
-        <!--<label>תשובה</label>-->
-        <!--<select class="form-control" id="ans" multiple>-->
-         <!--<option ng-repeat="answer in question.Answers">{{answer}}</option>-->
-        <!--</select>-->
-       <!--</div>-->
-      <!--</form>-->
-     <!--</div>-->
-    <!--</div>-->
-
     <div class="modal-footer">
      <button type="button" ng-click="submit()" class="btn btn-primary" ng-model="ans">שלח</button>
     </div>
    </div>
-
   </div>
  </div>
 </div>
