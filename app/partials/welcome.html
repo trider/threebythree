@@ -44,24 +44,22 @@
     <div class="modal-header">
      <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
      <h4 class="modal-title" id="myModalLabel"></h4>
-     <h1 class="txt" ng-repeat="question in questions|filter:sqid">{{ question.Question }}?</h1>
+     <div class="anstxt" ng-repeat="question in questions|filter:sqid">{{ question.Question }}?</div>
     </div>
     <div class="modal-body">
-     <div id="media" class="row" ></div>
-     <div class="row" ng-repeat="question in questions|filter:sqid">
+     <div class="row">
+      <div id="media" class="row" ></div>
        <form role="form">
-        <div class="col-sm-3 pull-right anstxt">
+        <div class="col-sm-4 pull-right anstxt" data-ng-repeat="question in questions|filter:sqid">
         <label>תשובה</label>
-         <div class="row" ng-repeat="question in questions|filter:sqid">
+         <div ng-repeat="question in questions|filter:sqid">
              <label data-ng-repeat="answer in question.Answers">
               <input name = "answer" type="radio" value="{{ answer }}" ng-model="$parent.ans"> {{answer}}
              </label>
             <input class="form-control" id="ans" value="{{ ans }}">
-
          </div>
         </div>
        </form>
-
       </div>
     <div class="modal-footer">
      <button type="button" ng-click="submit()" class="btn btn-primary" ng-model="ans">שלח</button>
